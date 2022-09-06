@@ -4,6 +4,9 @@
 #include <assert.h>
 using namespace std;
 
+const int STANDARD_NUMBER_OF_SAMPLES = 50;
+std::stringstream ActualSenderOutput[STANDARD_NUMBER_OF_SAMPLES], ExpectedSenderOutput[STANDARD_NUMBER_OF_SAMPLES];
+
 void CallExpectedSenderOutput(int f_Temperature_Sensor_Readings[], int f_State_Of_Charge[]) {
     int index, buffer_index = 0;
     for(index = 0; index < STANDARD_NUMBER_OF_SAMPLES; index++) {
