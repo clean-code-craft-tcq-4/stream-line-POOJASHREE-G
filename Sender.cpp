@@ -35,7 +35,7 @@ void CallSender(int f_Temperature_Sensor_Readings[],int f_State_Of_Charge[]) {
 
 bool TestSenderOutput(int f_Temperature_Sensor_Readings[], int f_State_Of_Charge[]) {
 
-    CallExpectedSenderOutput(int f_Temperature_Sensor_Readings[], int f_State_Of_Charge[]);
+    CallExpectedSenderOutput(f_Temperature_Sensor_Readings, f_State_Of_Charge);
     for(int  index= 0; index < STANDARD_NUMBER_OF_SAMPLES; index++){
         if(ActualSenderOutput[index].str() != ExpectedSenderOutput[index].str()) {
             return false;
