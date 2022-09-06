@@ -1,15 +1,20 @@
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+
+#include "test/catch.hpp"
+#include <iostream>
 #include <sstream>
 #include <cassert>
 #include "Sender.hpp"
+using namespace std;
 
-void testMyFunctionDisplay()
-{
-    // Arrange
-    std::ostringstream output_buffer;
-
-    // Act
-    toBeTested(output_buffer);
-
-    // Assert
-    assert(output_buffer.str() == "This is the correct output.");
+TEST_CASE("PASSING TEST CASE 1") {
+    int Temperature_Sensor_Readings [] = { 0 };
+    int State_Of_Charge [] = { 0 };
+    for(int index = 1; index <= STANDARD_NUMBER_OF_SAMPLES; index++)
+    {
+        Temperature_Sensor_Readings[index] = rand() % 100;
+        State_Of_Charge[index] = rand() % 10;
+    }
+    CallSender(Temperature_Sensor_Readings, State_Of_Charge);
+    REQUIRE(TestSenderOutput(Temperature_Sensor_Readings, State_Of_Charge) == true);
 }
