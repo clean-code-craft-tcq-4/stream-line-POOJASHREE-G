@@ -22,8 +22,8 @@ void CallSender(int f_Temperature_Sensor_Readings[],int f_State_Of_Charge[]) {
     int index, buffer_index = 0;
     for(index = 0; index < STANDARD_NUMBER_OF_SAMPLES; index++) {
 
-        cout << left << setw(5) << "Temperature_Sensor_Reading : " << f_Temperature_Sensor_Readings[index]
-            << left << setw(5) << "State_Of_Charge : " << f_State_Of_Charge[index]
+        cout << left << setw(5) << "  Temperature_Sensor_Reading : " << f_Temperature_Sensor_Readings[index]
+            << left << setw(5) << "  State_Of_Charge : " << f_State_Of_Charge[index]
             << std::endl;
 
 
