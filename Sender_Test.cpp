@@ -7,6 +7,9 @@
 #include "Sender.hpp"
 using namespace std;
 
+extern const int STANDARD_NUMBER_OF_SAMPLES = 50;
+extern std::stringstream ActualSenderOutput[STANDARD_NUMBER_OF_SAMPLES], ExpectedSenderOutput[STANDARD_NUMBER_OF_SAMPLES];
+
 TEST_CASE("PASSING TEST CASE 1") {
     int Temperature_Sensor_Readings [] = { 0 };
     int State_Of_Charge [] = { 0 };

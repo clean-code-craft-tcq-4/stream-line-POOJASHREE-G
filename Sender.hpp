@@ -6,9 +6,6 @@
 #include <string>
 #include <iomanip>
 
-extern const int STANDARD_NUMBER_OF_SAMPLES = 50;
-extern std::stringstream ActualSenderOutput[STANDARD_NUMBER_OF_SAMPLES], ExpectedSenderOutput[STANDARD_NUMBER_OF_SAMPLES];
-
 bool TestSenderOutput(int f_Temperature_Sensor_Readings[], int f_State_Of_Charge[]);
 void CallSender(int f_Temperature_Sensor_Readings[],int f_State_Of_Charge[]);
 void CallExpectedSenderOutput(int f_Temperature_Sensor_Readings[], int f_State_Of_Charge[]);
