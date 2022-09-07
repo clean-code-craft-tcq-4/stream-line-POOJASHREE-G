@@ -15,8 +15,8 @@ TEST_CASE("PASSING TEST CASE 1") {
 
     int Temperature_Sensor_Readings [STANDARD_NUMBER_OF_SAMPLES] = { 0 };
     int State_Of_Charge [STANDARD_NUMBER_OF_SAMPLES] = { 0 };
-    GenerateRandomNumbers(Temperature_Sensor_Readings, STANDARD_NUMBER_OF_SAMPLES);
-    GenerateRandomNumbers(State_Of_Charge, STANDARD_NUMBER_OF_SAMPLES);
+    GenerateRandomTemperNumbers(Temperature_Sensor_Readings, STANDARD_NUMBER_OF_SAMPLES);
+    GenerateRandomSOCNumbers(State_Of_Charge, STANDARD_NUMBER_OF_SAMPLES);
     CallSender(Temperature_Sensor_Readings, State_Of_Charge);
     REQUIRE(TestSenderOutput(Temperature_Sensor_Readings, State_Of_Charge) == true);
 }
