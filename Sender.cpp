@@ -54,7 +54,7 @@ void GenerateRandomNumbers(int *f_ToBeGenerated_arr, int f_size_arr) {
 
     for(int index=0;index<f_size_arr;index++)
     {
-        f_ToBeGenerated_arr[i] = rand();
+        f_ToBeGenerated_arr[index] = rand();
     }
 
 }
