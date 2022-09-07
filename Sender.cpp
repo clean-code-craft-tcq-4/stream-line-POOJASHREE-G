@@ -47,3 +47,14 @@ bool TestSenderOutput(int f_Temperature_Sensor_Readings[], int f_State_Of_Charge
     }
     return true;
 }
+
+void GenerateRandomNumbers(int *f_ToBeGenerated_arr, int f_size_arr) {
+
+    srand(time(NULL));
+
+    for(int index=0;index<f_size_arr;index++)
+    {
+        f_ToBeGenerated_arr[i] = rand();
+    }
+
+}
