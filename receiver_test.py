@@ -1,5 +1,4 @@
 import unittest
-import pytest
 
 from receiver import * 
 
